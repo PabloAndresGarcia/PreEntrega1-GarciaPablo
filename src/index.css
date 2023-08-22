@@ -26,16 +26,16 @@ p{
 
 .navbar {
   background-color: #333;
-  display: flex; /* Cambiamos el flujo a flex para que los elementos sean en línea */
-  justify-content: space-between; /* Distribuye los elementos a lo largo del espacio disponible */
-  align-items: center; /* Centra los elementos verticalmente */
-  padding: 10px 20px; /* Espaciado alrededor de los elementos */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 10px 20px; 
 }
 
 .nav-list {
   list-style-type: none;
-  display: flex; /* Cambiamos el flujo de los elementos de bloque a en línea */
-  gap: 20px; /* Espacio entre los elementos de la lista */
+  display: flex; 
+  gap: 20px; 
 }
 
 .nav-list li a {
@@ -44,7 +44,6 @@ p{
   font: bold;
 }
 
-/* Cambiar el color de los enlaces cuando se pasa el cursor sobre ellos */
 .nav-list li a:hover {
   color: #ddd;
 }
@@ -54,7 +53,7 @@ p{
 }
 
 .logo {
-  width: 75px; /* Ajusta el tamaño del icono según tus preferencias */
+  width: 75px; 
   height: 75px;
   border-radius: 50%;
 }
@@ -75,9 +74,8 @@ p{
   right: -5px;
 }
 
-/* Estilos para el icono del carrito */
 .cart-icon {
-  width: 24px; /* Ajusta el tamaño del icono según tus preferencias */
+  width: 24px; 
   height: 24px;
-  margin-right: 5px; /* Espacio entre el icono y la notificación */
+  margin-right: 5px; 
 }
