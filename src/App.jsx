@@ -1,18 +1,21 @@
-import './App.css'
-import Boton from './Button'
+import React from 'react';
+import Navbar from './components/NavBar/NavBar';
+import ItemListContainer from './components/ItemListConteiner/ItemListContainer';
+import './index.css'
 
-function App() {
- 
-  const nombre3 = "Pablo"
-
+const App = () => {
   return (
-    <div className='Nombre'>
-      <p>Joaquin</p>
-      <p>Aleja</p>
-      <p>{nombre3}</p>
-      <Boton />
+    <div>
+     
+        <Navbar />
+   
+        <ItemListContainer 
+      greeting={<div className="content">
+      <h1>Tienda de ropa</h1>
+    </div>}
+      />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

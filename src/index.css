@@ -14,56 +14,70 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
 
 h1 {
-  font-size: 3.2em;
+  font-size: 1.5em;
   line-height: 1.1;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+p{
+  font-size: 0.7em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+.navbar {
+  background-color: #333;
+  display: flex; /* Cambiamos el flujo a flex para que los elementos sean en línea */
+  justify-content: space-between; /* Distribuye los elementos a lo largo del espacio disponible */
+  align-items: center; /* Centra los elementos verticalmente */
+  padding: 10px 20px; /* Espaciado alrededor de los elementos */
+}
+
+.nav-list {
+  list-style-type: none;
+  display: flex; /* Cambiamos el flujo de los elementos de bloque a en línea */
+  gap: 20px; /* Espacio entre los elementos de la lista */
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font: bold;
+}
+
+/* Cambiar el color de los enlaces cuando se pasa el cursor sobre ellos */
+.nav-list li a:hover {
+  color: #ddd;
+}
+
+.content {
+  text-align: center;
+}
+
+.logo {
+  width: 75px; /* Ajusta el tamaño del icono según tus preferencias */
+  height: 75px;
+  border-radius: 50%;
+}
+.cart-widget {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.notification {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+}
+
+/* Estilos para el icono del carrito */
+.cart-icon {
+  width: 24px; /* Ajusta el tamaño del icono según tus preferencias */
+  height: 24px;
+  margin-right: 5px; /* Espacio entre el icono y la notificación */
 }
