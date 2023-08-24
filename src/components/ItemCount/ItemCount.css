@@ -1,0 +1,54 @@
+.ItemCountContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ajusta esto según tus necesidades */
+}
+
+.Counter {
+    border: 3px solid #ccc;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.Controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Button {
+    background-color: #38033a;
+    color: rgb(158, 161, 58);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.Number {
+    font-size: 20px; /* Tamaño de fuente ajustado */
+    font-weight: bold; /* Texto en negrita */
+    color: rgb(158, 161, 58);
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.Button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.DecrementButton {
+    background-color: #dc3545;
+}
+
+.IncrementButton {
+    background-color: #28a745;
+}
+
+.AddToCartButton {
+    background-color: #007bff;
+}
