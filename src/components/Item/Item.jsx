@@ -1,3 +1,5 @@
+import './Item.css'
+
 const Item = ({id, name, img, price, stock}) => {
     return(
         <article className="CardItem">
