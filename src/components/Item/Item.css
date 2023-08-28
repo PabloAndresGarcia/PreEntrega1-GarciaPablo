@@ -17,3 +17,10 @@
   justify-content: center;
   align-items: center;
 }
+.ItemImg {
+  margin: 0;
+  padding: 0;
+  padding-left: 60px;
+  width: 70px;
+  height: 70px;
+}
