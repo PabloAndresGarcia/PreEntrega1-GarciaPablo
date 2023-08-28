@@ -1,5 +1,4 @@
 import React from 'react'
-import FotoCV from './assets/FotoCV.jpeg'
 
 const products = [
     { id: 1, name: 'Remera', price: 1500, category: 'Remera', img: `https://cdn.pixabay.com/photo/2017/01/13/04/56/t-shirt-1976334_1280.png`, stock: 13, description: '' },
