@@ -54,3 +54,15 @@
     height: 24px;
     margin-right: 5px; 
   }
+
+  .option{
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(255, 0, 0);
+  }
+ 
+  .ActiveOption {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+  }
