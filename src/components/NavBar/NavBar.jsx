@@ -12,8 +12,8 @@ const Navbar = () => {
       <img className='logo' src={thor} alt="Cart Icon" />
       </Link>
       <div className="nav-list">
-        <NavLink to={`/category/remeras`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Remeras </NavLink>
-        <NavLink to={`/category/pantalones`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Pantalones </NavLink> 
+        <NavLink to={`/category/remera`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Remeras </NavLink>
+        <NavLink to={`/category/pantalon`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Pantalones </NavLink> 
         <NavLink to={`/category/zapatillas`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Zapatillas </NavLink>
         <NavLink to={`/category/accesorios`} className={({isActive}) => isActive ? 'ActiveOption' : 'option'}> Accesorios </NavLink>    
        </div>
