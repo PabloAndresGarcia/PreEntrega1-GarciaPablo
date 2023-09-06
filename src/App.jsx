@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import React from 'react';
 import Navbar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListConteiner/ItemListContainer';
@@ -8,20 +9,19 @@ import './index.css'
 
 
 const App = () => {
-
-  
-
   return (
     <div>
-     
-        <Navbar />
-        <ItemListContainer 
-      greeting={<div className="content">
-      <h1>Tienda de ropa</h1>
-    </div>}
-      />
-      {/* <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ', quantity)} /> */}
-      <ItemDetailContainer />
+      <BrowserRouter>
+      <Navbar />
+        <Routes>
+          <Route path='/' element={<ItemListContainer />} />
+          <Route path='/category/:categoryId' element={<ItemListContainer />} />
+          <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+          <Route path='*' element={<h1>404 NOT FOUND</h1>} />
+        </Routes>
+      </BrowserRouter>     
+        
+        
     </div>
   );
 };

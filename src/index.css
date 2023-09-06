@@ -1,5 +1,5 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: sans-serif, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -14,69 +14,12 @@
   -webkit-text-size-adjust: 100%;
 }
 
-
-h1 {
+/* h1 {
   font-size: 1.5em;
   line-height: 1.1;
 }
 p{
   font-size: 0.7em;
-}
+} */
 
 
-.navbar {
-  background-color: #333;
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  padding: 10px 20px; 
-}
-
-.nav-list {
-  list-style-type: none;
-  display: flex; 
-  gap: 20px; 
-}
-
-.nav-list li a {
-  color: white;
-  text-decoration: none;
-  font: bold;
-}
-
-.nav-list li a:hover {
-  color: #ddd;
-}
-
-.content {
-  text-align: center;
-}
-
-.logo {
-  width: 75px; 
-  height: 75px;
-  border-radius: 50%;
-  
-}
-.cart-widget {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.notification {
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 50%;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-}
-
-.cart-icon {
-  width: 24px; 
-  height: 24px;
-  margin-right: 5px; 
-}
