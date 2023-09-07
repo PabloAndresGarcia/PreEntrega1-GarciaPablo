@@ -6,9 +6,8 @@
   background-color: #454545;
   color: #48064b;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  display: block;
+  display: grid;
+  place-items: center;
   margin: 10px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }

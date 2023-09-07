@@ -15,9 +15,8 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .ItemHeader, .ItemImg, .Info, .ItemFooter {
-    display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
 }
 .ItemImg {
   margin: 0;
