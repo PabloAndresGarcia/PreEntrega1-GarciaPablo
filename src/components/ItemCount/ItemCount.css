@@ -1,6 +1,6 @@
 .ItemCountContainer {
-    display: grid;
-  place-items: center;
+    display: block;
+    place-items: center;
     height: 100vh; /* Ajusta esto según tus necesidades */
 }
 
