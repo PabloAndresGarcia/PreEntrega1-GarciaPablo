@@ -1,4 +1,4 @@
-import './ItemCount.css'
+
 import { useState } from 'react'
 
 const ItemCount = ({stock, initial, onAdd}) => {
@@ -18,7 +18,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
     return(
         <div className='Counter'>
-            <div className='Controls'>
+            <div className='Controls flex items-center justify-center gap-4 text-2xl font-bold'>
                 <button className='Button' onClick={decrement}>-</button>
                 <h4 className='Number'>{quantity}</h4>
                 <button className='Button' onClick={increment}>+</button>
