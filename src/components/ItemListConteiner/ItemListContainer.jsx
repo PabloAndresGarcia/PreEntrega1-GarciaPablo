@@ -31,11 +31,8 @@ const ItemListContainer = ({ greeting }) => {
             color="#EE6C4D"
             />
             </h1>
-    
-    
-    
     return (
-        <div className='m-10 flex'>
+        <div className='m-10 flex items-center justify-center'>
             <h1>{greeting}</h1>
             <ItemList products = {products} />
         </div>
