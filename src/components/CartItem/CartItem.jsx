@@ -7,7 +7,7 @@ const CartItem = ({id, name, quantity, price}) => {
     const { removeItem, cartUpdated } = useContext(CartContext)
 
     return(
-        <div className="bg-secondary-100  m-5 p-8 rounded-xl">
+        <div className="bg-secondary-100  m-5 p-8 rounded-xl grid grid-cols-3 gap-4">
             <header className="Header items-center justify-center">
                 <h2 className="ItemHeader text-2xm uppercase font-bold tracking-[3px] text-primary mb-3">
                     {name}

@@ -8,7 +8,7 @@ const Cart = () => {
 
     const {cart, clearCart, totalQuantity, total} = useContext(CartContext)
 
-    if(totalQuantity === 0) {
+    if( totalQuantity === 0) {
         return(
             <div>
                 <h1>No hay items en el carrito</h1>
@@ -20,9 +20,9 @@ const Cart = () => {
   return (
     <div>
         { cart.map(p=> <CartItem key={p.id} {...p}/>) }
-        <h3>Total: ${total}</h3>
-        <button onClick={() => clearCart()} className=''>Limpiar carrito</button>
-        <Link to='/checkout' className='Option'>Checkout</Link>
+        <h3 className='flex text-xl font-bold text-primary items-center justify-center' >Total: ${total}</h3>
+        <button onClick={() => clearCart()} className='flex text-xl font-bold text-primary items-center justify-center'>Limpiar carrito</button>
+        <Link to='/checkout' className='flex text-xl font-bold text-primary items-center justify-center'>Checkout</Link>
     </div>
   )
 }
