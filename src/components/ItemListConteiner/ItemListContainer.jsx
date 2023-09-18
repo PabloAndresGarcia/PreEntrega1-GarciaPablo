@@ -25,8 +25,8 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId])
      
 
-    if (loading === true) return <h1 className='items-center w-full justify-center'>
-        <InfinitySpin             
+    if (loading === true) return <h1 className='flex items-center justify-center pt-10'>
+        <InfinitySpin
             width='200'
             color="#EE6C4D"
             />
