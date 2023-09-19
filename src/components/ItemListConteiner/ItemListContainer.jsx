@@ -33,7 +33,7 @@ const ItemListContainer = ({ greeting }) => {
             </h1>
     return (
         <div className='m-10 flex items-center justify-center'>
-            <h1>{greeting}</h1>
+           
             <ItemList products = {products} />
         </div>
     )

@@ -13,9 +13,9 @@ const CartItem = ({id, name, quantity, price}) => {
                     {name}
                 </h2>
             </header>
-            <section className='text-primary'>
+            <section className='text-primary flex gap-5'>
                 <p className="Info flex items-center justify-center">
-                    Precio: ${price*quantity}
+                    Precio: ${price}
                 </p>
                 <p className="Info flex items-center justify-center">
                     Cantidad: {quantity}

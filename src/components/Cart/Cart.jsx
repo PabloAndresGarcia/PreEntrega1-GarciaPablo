@@ -10,19 +10,19 @@ const Cart = () => {
 
     if( totalQuantity === 0) {
         return(
-            <div>
-                <h1>No hay items en el carrito</h1>
-                <Link to='/' className='Option'>Ver roductos</Link>
+            <div className=''>
+                <h1 className='flex mt-10 text-xl font-bold text-primary items-center justify-center'>No hay items en el carrito</h1>
+                <Link to='/' className='flex m-10 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-700 items-center justify-center'>Ver productos</Link>
             </div>
         )
     }
 
   return (
-    <div>
+    <div className='grid'>
         { cart.map(p=> <CartItem key={p.id} {...p}/>) }
         <h3 className='flex text-xl font-bold text-primary items-center justify-center' >Total: ${total}</h3>
-        <button onClick={() => clearCart()} className='flex text-xl font-bold text-primary items-center justify-center'>Limpiar carrito</button>
-        <Link to='/checkout' className='flex text-xl font-bold text-primary items-center justify-center'>Checkout</Link>
+        <button className='flex m-10 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-700 items-center justify-center' onClick={() => clearCart()} >Limpiar carrito</button>
+        <Link to='/checkout' className='flex m-5 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-700 items-center justify-center'>Checkout</Link>
     </div>
   )
 }
