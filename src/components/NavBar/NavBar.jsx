@@ -6,8 +6,8 @@ import { NavLink, Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="navbar flex bg-secondary-100 items-center justify-center gap-10">
-     <Link to='/'>
+    <nav className="navbar flex bg-orange-400 items-center justify-center gap-10">
+     <Link to='/' className=''>
       <img className=' logo w-20 h-20' src={thor} alt="Cart Icon" />
       </Link>
       <div className="nav-list flex gap-5 text-2xl uppercase font-bold tracking-[1px] text-primary items-center">

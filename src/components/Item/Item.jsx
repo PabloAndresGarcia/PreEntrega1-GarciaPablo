@@ -8,8 +8,8 @@ const Item = ({id, name, img, price, stock}) => {
                     {name}
                 </h2>
             </header>
-            <picture className='flex items-center justify-center py-2 px-4 gap-4 rounded-full mb-8'>
-                <img src={img} alt={name} className="ItemImg h-12 w-12" />
+            <picture className='flex items-center justify-center gap-4'>
+                <img src={img} alt={name} className="ItemImg w-full max-w-lg" />
             </picture>
             <section className='text-primary'>
                 <p className="Info flex items-center justify-center">
@@ -19,8 +19,8 @@ const Item = ({id, name, img, price, stock}) => {
                     Stock disponible: {stock}
                 </p>
             </section>            
-            <footer className="ItemFooter text-primary bg-secondary-900 rounded-lg mt-4 hover:bg-secondary-700 flex items-center justify-center">
-                <Link to={`/item/${id}`} className='Option'> Ver detalle </Link>
+            <footer className="ItemFooter text-primary bg-secondary-900  hover:bg-primary hover:text-secondary-100 rounded-lg mt-4 flex items-center justify-center">
+                <Link to={`/item/${id}`} className=''> Ver detalle </Link>
             </footer>
             
         </div>

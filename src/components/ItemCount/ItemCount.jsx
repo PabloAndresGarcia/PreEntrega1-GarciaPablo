@@ -23,7 +23,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
                 <button className='Button' onClick={increment}>+</button>
             </div>
             <div>
-                <button className=' flex m-2 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-700 items-center justify-center ' onClick={() => onAdd(quantity)} disabled={!stock}>
+                <button className=' flex m-2 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-900 items-center justify-center ' onClick={() => onAdd(quantity)} disabled={!stock}>
                     Agregar al carrito
                 </button>
             </div>
