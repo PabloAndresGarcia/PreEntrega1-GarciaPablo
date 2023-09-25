@@ -24,7 +24,6 @@ const CartItem = ({id, name, quantity, price}) => {
             <footer className="ItemFooter text-primary bg-secondary-900 rounded-lg mt-4 hover:bg-secondary-700 flex items-center justify-center">
                 <button onClick={() => removeItem(id)}> x </button>
             </footer>
-            
         </div>
         
     )
