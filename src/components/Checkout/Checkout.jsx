@@ -17,13 +17,13 @@ const Checkout = () => {
                     name, phone, email
                 },
                 items: cart,
-                total: total,
+                total: total(),
                 date: Timestamp.fromDate(new Date())
             }
             const batch = writeBatch(db)
             const outOFStock = []
 
-            const ids = cart.map(prod=>prod.id)
+            const ids = cart.map(Productos=>Productos.id)
             const productsRef = collection(db, 'Productos')
             const productsAddedFromFirestore = await getDoc(query(productsRef, where(documentId(), 'in', ids)))
 
@@ -33,7 +33,7 @@ const Checkout = () => {
                 const dataDoc = doc.data()
                 const stockDb = dataDoc.stockDb
 
-                const productsAddedFromFirestore = cart.find( prod => prod.id === doc.id)
+                const productsAddedFromFirestore = cart.find( Productos => Productos.id === doc.id)
                 const prodQuantity = productsAddedToCart?.quantity
 
                 if (stockDb >= prodQuantity) {
@@ -45,7 +45,7 @@ const Checkout = () => {
             if(outOFStock.length === 0){
                 await batch.commit()
 
-                const orderRef = collection(db, 'orders')
+                const orderRef = collection(db, 'Ordenes')
 
                 const orderAdded = await addDoc(orderRef, objOrder)
 
@@ -72,7 +72,7 @@ const Checkout = () => {
 
     return (
         <div>
-            <h1>Creckout</h1>
+            <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Checkout</h1>
             <CheckoutForm onConfirm={createOrder} />
         </div>
     )

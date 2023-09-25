@@ -6,43 +6,45 @@ const CheckoutForm = ({ onConfirm }) => {
     const [phone, setPhone] = useState ('')
     const [email, setEmail] = useState ('')
 
-    const handleConfirm = (event) =>
+    const handleConfirm = (event) =>{
     event.preventDefault()
 
-    const userData = {
-        name, phone, email
-    }
-    onConfirm(userData)
+    const userData = {name, phone, email}
+    onConfirm(userData);
+}
 
     return (
         <div>
             <form onSubmit={handleConfirm} className='grid items-center justify-center m-10 p-5'>
-                <label className='grid pb-3'>
-                    Nombre:
+                <label className='grid mb-3 text-xl border-solid border-2 rounded-md border-primary'>
+            
                     <input
-                        className=''
+                        className='pl-2 rounded-md'
                         type="text"
                         value={name}
+                        placeholder='Nombre' 
                         onChange={({target})=> setName(target.value)} />
                 </label>
-                <label className=''>
-                    Telefono:
+                <label className='grid mb-3 text-xl border-solid border-2 rounded-md border-primary'>
+               
                     <input
-                        className=''
+                        className='pl-2 rounded-md'
                         type="text"
                         value={phone}
+                        placeholder='Telefono' 
                         onChange={({target})=> setPhone(target.value)} />
                 </label>
-                <label className=''>
-                    Email
+                <label className='grid mb-3 text-xl border-solid border-2 rounded-md border-primary'>
+                
                     <input
-                        className=''
+                        className='pl-2 rounded-md'
                         type="text"
                         value={email}
+                        placeholder='Correo electrónico'
                         onChange={({target})=> setEmail(target.value)} />
                 </label>
                 <div className=''>
-                    <button type='submit' className=''>Crear Orden</button>
+                    <button type='submit' className='flex m-10 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-100 items-center justify-center'>Crear Orden</button>
                 </div>
 
             </form>
