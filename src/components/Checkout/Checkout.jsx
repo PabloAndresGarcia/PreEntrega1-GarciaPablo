@@ -1,4 +1,4 @@
-import { Timestamp, addDoc, collection, documentId, getDoc, query, where, writeBatch } from "firebase/firestore"
+import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore"
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 import { db } from "../service/firebase/firebaseConfig"
 import { CartContext } from "../../context/CartContext"
@@ -27,7 +27,7 @@ const Checkout = () => {
 
             const ids = cart.map(Productos=>Productos.id)
             const productsRef = collection(db, 'Productos')
-            const productsAddedFromFirestore = await getDoc(query(productsRef, where(documentId(), 'in', ids)))
+            const productsAddedFromFirestore = await getDocs(query(productsRef, where(documentId(), 'in', ids)))
 
             const {docs} =productsAddedFromFirestore
 
@@ -36,7 +36,7 @@ const Checkout = () => {
                 const stockDb = dataDoc.stockDb
 
                 const productsAddedFromFirestore = cart.find( Productos => Productos.id === doc.id)
-                const prodQuantity = productsAddedToCart?.quantity
+                const prodQuantity = productsAddedFromFirestore?.quantity
 
                 if (stockDb >= prodQuantity) {
                     batch.update(doc.ref, {stock: stockDb - prodQuantity})
@@ -65,11 +65,11 @@ const Checkout = () => {
     }
 
     if(loading) {
-        return <h1>Se esta generando su orden...</h1>
+        return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Se esta generando su orden...</h1>
     }
 
     if(orderId){
-        return <h1>El id de su orden es: {orderId} </h1>
+        return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">El id de su orden es: {orderId} </h1>
     }
 
     return (
