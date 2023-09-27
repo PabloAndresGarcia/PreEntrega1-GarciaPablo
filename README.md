@@ -1,8 +1,11 @@
 # Proyecto Ecommerce Thor. CoderHouse React Js + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p> Este es el proyecto final del curso de React Js de CoderHouse. Donde se pone en practica todos los conocimientos trabajados durante la cursada. </p>
 
-Currently, two official plugins are available:
+Personalmente me centre en el funcionamiento de la página que era requisito obligatorio para la aprobación del curso.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La página imita a una tienda virtual de ropa, con un nav para moverse entre los diferentes productos y tambien cuenta con una base de datos (Firebase) donde encontramos los productos y donde recibimos las "ordenes de compra".
+
+<h3> Para ejecutar el proyecto </h3>
+
+- escribir en la consola: "npm run dev"

@@ -1,4 +1,4 @@
-import { Timestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore"
+import { serverTimestamp, addDoc, collection, documentId, getDocs, query, where, writeBatch } from "firebase/firestore"
 import CheckoutForm from '../CheckoutForm/CheckoutForm'
 import { db } from "../service/firebase/firebaseConfig"
 import { CartContext } from "../../context/CartContext"
@@ -20,7 +20,7 @@ const Checkout = () => {
                 },
                 items: cart,
                 total: total,
-                date: Timestamp.fromDate(new Date())
+                date: serverTimestamp()
             }
             const batch = writeBatch(db)
             const outOFStock = []
@@ -33,7 +33,7 @@ const Checkout = () => {
 
             docs.forEach(doc =>{
                 const dataDoc = doc.data()
-                const stockDb = dataDoc.stockDb
+                const stockDb = dataDoc.stock
 
                 const productsAddedFromFirestore = cart.find( Productos => Productos.id === doc.id)
                 const prodQuantity = productsAddedFromFirestore?.quantity
