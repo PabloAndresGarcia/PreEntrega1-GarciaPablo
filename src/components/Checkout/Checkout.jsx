@@ -8,8 +8,8 @@ import { useState, useContext } from "react"
 const Checkout = () => {
     const [loading, setLoading] = useState(false)
     const [orderId, setOrderId] = useState('')
-
     const {cart, total, clearCart} = useContext(CartContext)
+
 
     const createOrder = async ({ name, phone, email}) => {
         setLoading(true)
@@ -46,11 +46,8 @@ const Checkout = () => {
             })
             if(outOFStock.length === 0){
                 await batch.commit()
-
                 const orderRef = collection(db, 'Ordenes')
-
                 const orderAdded = await addDoc(orderRef, objOrder)
-
                 setOrderId(orderAdded.id)
                 clearCart()
             } else {
@@ -63,15 +60,12 @@ const Checkout = () => {
             setLoading(false)
     } 
     }
-
     if(loading) {
         return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Se esta generando su orden...</h1>
     }
-
     if(orderId){
         return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">El id de su orden es: {orderId} </h1>
     }
-
     return (
         <div>
             <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Checkout</h1>
