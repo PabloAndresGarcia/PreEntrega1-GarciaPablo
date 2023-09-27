@@ -3,6 +3,7 @@ import CheckoutForm from '../CheckoutForm/CheckoutForm'
 import { db } from "../service/firebase/firebaseConfig"
 import { CartContext } from "../../context/CartContext"
 import { useState, useContext } from "react"
+import { Link } from 'react-router-dom'
 
 
 const Checkout = () => {
@@ -64,8 +65,12 @@ const Checkout = () => {
         return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Se esta generando su orden...</h1>
     }
     if(orderId){
-        return <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">El id de su orden es: {orderId} </h1>
-    }
+        return (
+            <div>
+        <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10 mb-10">El id de su orden es: {orderId} </h1>
+        <Link to = '/' className='flex m-5 p-1 rounded-xl text-xl font-bold text-secondary-900 bg-primary hover:text-primary hover:bg-secondary-100 items-center justify-center'> Seguir comprando </Link>
+        </div>)
+        }
     return (
         <div>
             <h1 className=" flex text-3xl tracking-[2px] font-bold justify-center items-center mt-10">Checkout</h1>
