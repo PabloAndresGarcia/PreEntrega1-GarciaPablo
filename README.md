@@ -8,4 +8,4 @@ La página imita a una tienda virtual de ropa, con un nav para moverse entre los
 
 <h3> Para ejecutar el proyecto </h3>
 
-- escribir en la consola: "npm run dev"
+- Escribir en la consola: "npm run dev"
