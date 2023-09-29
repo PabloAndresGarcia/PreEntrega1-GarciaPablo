@@ -62,5 +62,5 @@ Para que el proyecto se logre realizar de una manera esperada utilicé las sigui
 https://pre-entrega2-garcia-pablo.vercel.app/
 
 # *VIDEO*:
-![Funcionamiento_React] https://youtu.be/J3D-Rr8fZ1M 
+![Funcionamiento_React] (https://youtu.be/J3D-Rr8fZ1M)
 
