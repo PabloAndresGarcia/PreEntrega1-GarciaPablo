@@ -61,6 +61,6 @@ Para que el proyecto se logre realizar de una manera esperada utilicé las sigui
 
 https://pre-entrega2-garcia-pablo.vercel.app/
 
-# *GIF*:
-![Funcionamiento_React](https://user-images.githubusercontent.com/5633248/191972019-991f6ae2-3c84-4fbb-8b4f-70ef630b48ad.gif)
+# *VIDEO*:
+![Funcionamiento_React](https://youtu.be/J3D-Rr8fZ1M)
 
