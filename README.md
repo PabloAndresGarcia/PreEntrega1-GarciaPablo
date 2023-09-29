@@ -53,7 +53,6 @@ Para que el proyecto se logre realizar de una manera esperada utilicé las sigui
 |   name        |   String      |   Nombre      |
 |   category    |   String      |   Categoría   |
 |       img     |   String      |       img     |
-|       name    |   String      |      Nombre   |
 | description   |   String      | Descripcion   |
 |       price   |   number      |     Precio    |
 |       stock   |   number      |       stock   |
