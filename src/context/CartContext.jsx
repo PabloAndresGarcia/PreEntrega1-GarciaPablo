@@ -13,9 +13,16 @@ const addItem = (item, quantity) => {
     if(!isInCart(item.id)) {
         setCart(prev => [...prev, {...item, quantity}])
     } else {
-        console.error ('El producto ya fue agregado')
-    }
-}
+        // Si el producto ya está en el carrito, actualiza la cantidad
+        setCart((prev) =>
+          prev.map((product) =>
+            product.id === item.id
+              ? { ...product, quantity: product.quantity + quantity }
+              : product
+          )
+        );
+      }
+    };
 
 const removeItem = (itemId) => {
     const cartUpdated = cart.filter(prod => prod.id !== itemId)
